@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="./something.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Space Invaders Project</title>
+</head>
+<body>
+  <div id="blowup" class="blowup_overlay" onclick="hideblowup()">
+    <img id="blowup_img" src="" alt="big image">
+  </div>
+  
+  <script>
+    function showblowup(src) {
+      const overlay = document.getElementById('blowup');
+      const img = document.getElementById('blowup_img');
+      img.src = src;
+      overlay.style.display = 'flex';
+    }
+  
+    function hideblowup() {
+      document.getElementById('blowup').style.display = 'none';
+    }
+  </script>
+  
+  <div class="navi-above"></div>
+  <div class="navi">
+    <a href="./something.html"><- Back to Home</a>
+  </div>
+
+  <header>
+    <h1 style="text-align:center">Project: Space Invaders</h1>
+    <h3 style="text-align:center">A fun little remake of a retro classic</h3>
+  </header>
+
+  <section class="gridbox" style="grid-template-areas: 'project'; grid-template-columns: 1fr;">
+    <div class="child" style="grid-area: project;">
+      <p style="text-align: center">A school project based on the 1978 "Space Invaders", developed in Pygame (Python) in two weeks. Scroll through the images below to see!</p>
+      
+      <div style="text-align:center;">
+        <p><em>Opening screen is a simple pixel art crawl. Hovering over the High Score button displays the best of the best.</em></p>
+        <img class="project_images" src="images/Space1.png" alt="Gameplay 1" onclick="showblowup(this.src)">
+        <img class="project_images" src="images/Space2.png" alt="Gameplay 2" onclick="showblowup(this.src)">
+        <p><em>Early gameplay. Rudimentary Alien AI and shooting!</em></p>
+        <img class="project_images" src="images/Space5.png" alt="Gameplay 2" onclick="showblowup(this.src)">
+        
+        <p><em>Finalized gameplay - player/alien formations and special flying saucer in action!</em></p>
+        <img class="project_images" src="images/Space3.png" alt="Gameplay 3" onclick="showblowup(this.src)">
+        <img class="project_images" src="images/Space4.png" alt="Gameplay 4" onclick="showblowup(this.src)">
+        <p><em>Includes barriers that protect you from aliens and protect aliens from you. 3 lives and you're out!</em></p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

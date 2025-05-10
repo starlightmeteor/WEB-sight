@@ -1,0 +1,242 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lora', sans-serif;
+    padding: 0px;
+    color: black;
+    font-size: 20px;
+    background-color: aliceblue;
+    border: 20px solid navy;
+    border-top: 0 solid navy;
+    margin: 0px;
+    /* background-image: -webkit-linear-gradient(to right, lightblue, navy);
+    background-image: linear-gradient(to right, lightblue, navy); */
+    background-image: url("images/texture.png");
+    background-repeat: repeat;
+    background-size: 2300px;
+    background-blend-mode: multiply;
+    opacity: 1;
+}
+
+
+.navi {
+    background-color:rgb(151, 206, 255);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0px 16px;
+    position: sticky;
+    top: 16px;
+    z-index: 9;
+}
+
+.navi-above {
+    height: 16px; /* thickness of the navy bar */
+    background-color: navy;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+.navi::before {
+    content: "";
+    position: absolute;
+    top: 52px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: navy;
+    z-index: 10;
+}
+
+
+.navi a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 24px;
+    text-decoration: none;
+    font-size: 16;
+    z-index: 1;
+}
+
+.avatar-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  .avatar-image {
+    width: 320px;
+    height: auto;
+    border: 2px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    z-index: 2;
+  }
+  
+  .side-image {
+    width: 168px;
+    height: auto;
+  }
+
+  .mini-image {
+    width: 32px;
+    height: auto;
+  }
+
+
+  .project_images {
+    width: 100%;
+    max-width: 452px;
+    height: auto; 
+  }
+
+  /* .skills_images {
+    width: 100%;
+    max-width: 452px;
+    height: auto; 
+  } */
+
+  .titan {
+    width: 100%;
+    max-width: 452px; 
+    height: auto; 
+  }
+
+
+/* .page {
+    padding: 25px;
+    border: 4px solid navy;
+    background-color: aliceblue;
+} */
+
+.blowup_overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .blowup_overlay img {
+    max-width: 69%;
+    max-height: 90%;
+    border: 4px solid white;
+    border-radius: 12px;
+    box-shadow: 0 0 20px black;
+    background: white;
+  }
+
+/* .gridbox {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 8px;
+    gap: 16px;
+    box-sizing: border-box;
+    border: 20px;
+} */
+
+.gridbox {
+    display: grid;
+    grid-template-areas:
+      "about about"
+      "projects skills"
+      "contact contact";
+    grid-template-columns: 2fr  1fr;
+    gap: 0px;
+    padding: 55px;
+    box-sizing: border-box;
+  }
+  
+  .about {
+    grid-area: about;
+    text-align: center;
+}
+  .projects { grid-area: projects; }
+  .skills   { grid-area: skills; }
+  .contact  { grid-area: contact; }
+
+.child {
+    /* width: 100%;
+    max-width: 2000px; */
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: auto;
+    background-color: rgb(222, 240, 255);
+    border: 8px solid navy
+}
+
+input[type=text], select, textarea {
+    padding: 12px;
+    width: 97%;
+    border: 1px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    margin-top: 6px;
+    margin-bottom: 15px;
+}
+
+.submitButton {
+    background-color: rgb(151, 206, 255);
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: aquamarine;
+}
+
+
+.social-links {
+    margin-top: 12px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .social-links img {
+    width: 64px;
+    height: 64px;
+    transition: transform 0.2s ease;
+  }
+  
+  .social-links img:hover {
+    transform: scale(1.1);
+  }
+
+
+.child,
+.avatar-wrapper,
+.project_images,
+.skills_images{
+  border-radius: 16px;
+}
+
+.project_images,
+.skills_images{
+  border-radius: 6px;
+}
+
+.about_child {
+  /* width: 100%;
+  max-width: 2000px; */
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: auto;
+  border: 0px solid navy
+}

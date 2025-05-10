@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="./something.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Funny Deck Project</title>
+</head>
+<body>
+<div id="blowup" class="blowup_overlay" onclick="hideblowup()">
+    <img id="blowup_img" src="" alt="big image">
+</div>
+    
+    <script>
+    function showblowup(src) {
+        const overlay = document.getElementById('blowup');
+        const img = document.getElementById('blowup_img');
+        img.src = src;
+        overlay.style.display = 'flex';
+    }
+    
+    function hideblowup() {
+        document.getElementById('blowup').style.display = 'none';
+    }
+    </script>
+    
+<div class="navi-above"></div>
+<div class="navi">
+    <a href="./something.html"><- Back to Home</a>
+</div>
+
+<header>
+    <h1 style="text-align:center">Project: Funny Deck Game</h1>
+    <h3 style="text-align:center">A strategic card game, where how many slots you leave open for your cards matters</h3>
+</header>
+
+<section class="gridbox" style="grid-template-areas: 'project'; grid-template-columns: 1fr;">
+    <div class="child" style="grid-area: project;">
+    <p style="text-align: center">A deck-building video game where two players will face off while playing different creatures and attaching attacks and items to change their abilities.
+
+        The game is inspired around a mix of Pokemon's battle mechanics and a more traditional TCG-type board strategy. Each game is a 2v2 and each player has a total of 4 lives. Developed in Python using Pygame, project took around a month.</p>
+    
+    <div style="text-align:center;">
+        <p><em>A simple concept with tons of depth and strategy (working title "Deck Game": we never replaced it).</em></p>
+        <img class="project_images" src="images/Deck1.png" alt="Deck Image 1" onclick="showblowup(this.src)">
+        <img class="project_images" src="images/Deck6.png" alt="Deck Image 2" onclick="showblowup(this.src)">
+        <p><em>There are 4 kinds of cards! Creatures must be played first, then skills, items, and effects can be played to them in any of their 3 slots.</em></p>
+        <p>(For more details on the rules, click the following images)</p>
+        <img class="project_images" src="images/Deck2.png" alt="Deck Image 3" onclick="showblowup(this.src)">
+        <img class="project_images" src="images/Deck3.png" alt="Deck Image 4" onclick="showblowup(this.src)">
+        
+        <p><em>Cards are played, then battle insues!</em></p>
+        <img class="project_images" src="images/Deck8.png" alt="Deck Image 5" onclick="showblowup(this.src)">
+        <img class="project_images" src="images/Deck7.png" alt="Deck Image 6" onclick="showblowup(this.src)">
+        <p><em>The victor is the player that defeats 4 of their opponents creatures first!</em></p>
+        <img class="project_images" src="images/Deck11.png" alt="Deck Image 7" onclick="showblowup(this.src)">
+    </div>
+    </div>
+</section>
+</body>
+</html>

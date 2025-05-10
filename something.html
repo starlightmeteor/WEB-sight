@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="./something.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>My Portfollio, This is Real, This is Me</title>
+</head>
+
+<div id="blowup" class="blowup_overlay" onclick="hideblowup()">
+    <img id="blowup_img" src="" alt="big image">
+  </div>
+  
+  <script>
+    function showblowup(src) {
+      const overlay = document.getElementById('blowup');
+      const img = document.getElementById('blowup_img');
+      img.src = src;
+      overlay.style.display = 'flex';
+    }
+  
+    function hideblowup() {
+      document.getElementById('blowup').style.display = 'none';
+    }
+  </script>
+
+<body>
+    <div id="home"></div>
+    <div class="navi-above"></div>
+    <div class="navi" id="1">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <header>
+        <h1 style="text-align:center">Kurtis Volker</h1>
+        <div class="avatar-wrapper">
+            <img src="images/party.png" alt="Party Left" class="side-image">
+            <img src="images/this_is_me.jpg" alt="Avatar" class="avatar-image" onclick= showblowup(this.src)>
+            <img src="images/party2.png" alt="Party Right" class="side-image">
+        </div>
+        <h3 style="text-align: center">"It's ok to be a goober! Nobody knows what they're doing XD" </h3>
+        <!-- <h4 style="text-align: center">"I need a little fabulous, is that so wrong?" </h4> -->
+    </header>
+    
+    <section>
+        <div class="gridbox" id="grid">
+            <div class="child about" id="about">
+                <h3>--- About ---</h3>
+                <p>Greetings! It's me, Kurits Volker! I am a full-time college student, part-time game dev, soundboard engineer, and artist. It's my dream to make video games that enrich people through storytelling! My current place of education is California State University Fullerton...</p>
+                <p><a href="./about_me.html">Learn more about me here!</a></p>
+            </div>
+            <div class="child projects" id="projects">
+                <ul>
+                    <h3 style="text-align:center">--- Projects (click on images to get a closer look) ---</h3>
+                </ul>
+                <ul>
+                    <h3><li><a href="./project_space.html">Space Invaders</a></li></h3>
+                </ul>
+                    <!-- <img class="project_images Space1" src="images/Space1.png"  width="360" height="240" alt="Profile Picture"> -->
+                    <img class="project_images Space" src="images/Space1.png"  width="452" height="322" alt="Space Invaders_1" onclick="showblowup(this.src)">
+                    <img class="project_images Space" src="images/Space4.png"  width="452" height="322" alt="Space Invaders_4" onclick="showblowup(this.src)">
+                    <ul>
+                        <li>This is a school project video game loosely based on the original 1978 arcade game "Space Invaders". It was made using Pygame (A Python extension for visual blitting). This sees the player as a galatic space ship defending the planet from a squad of aliens to see who can get the high score! I was a good learning experience, even if pygame's capabilities are limited.</li>
+                    </ul>
+                <ul>
+                    <h3><li><a href="./project_deck.html">TCG: Funny Deck Game</a></li></h3>
+                </ul>
+                    <img class="project_images Deck" src="images/Deck1.png"  width="452" height="322" alt="Deck_Game_1" onclick="showblowup(this.src)">
+                    <img class="project_images Deck" src="images/Deck10.png"  width="452" height="322" alt="Deck_Game_6" onclick="showblowup(this.src)">
+                    <ul>
+                        <li>A new TCG video game! Designed my me and partner Emily, this game was inspired by the Pokemon VGC and trading card fan games. With 34 unique cards, each with their own individual effects, the projects was a huge time investment! This was a bit of a passion project: I fell in love with the idea so quickly! I might come back to work on this one and release a physical version of the card game sometime!</li>
+                    </ul>
+<!-- 
+                    <li><a href="PAGE_FILE_HERE.html" target="_blank">Deckgame</a></li>
+                    <ul>
+                        <li>Funny Deck game I had fun making :P</li>
+                    </ul> -->
+                </ul>
+            </div>
+            <div class="child skills" id="skills">
+                
+                <ul>
+                    <h3>--- Hard Skills ---</h3>
+                    <li>Programming Experience</li>
+                    <ul>
+                        <li>Python + C++</li>
+                        <li>Unreal Engine</li>
+                        <li>HTML + CSS</li>
+                    </ul>
+                    <li>Pencil + Digital Artist</li>
+                    <li>AI Workflow and Manipulation</li>
+                    <li>Game and Software Design</li>
+                    <li>Soundboard Engineer</li>
+                    <li>Custodial Experience</li>
+                    <li>Microsoft Office Efficient</li>
+                </ul>
+                <img class="skills_images titan" src="images/titan.jpg"  width="452" height="322" alt="Titan_Elephant_Birthday" onclick="showblowup(this.src)">
+
+                
+                <ul>
+                    <h3>--- Soft Skills ---</h3>
+                    <li>Natural Communicator</li>
+                    <li>Exceptional Problem Solver</li>
+                    <li>Strategic and Adaptable</li>
+                    <li>Practiced in Leadership and Negotiation</li>
+                    <li>Hard Working: Strive for Excellence</li>
+                    <li>Optimistic: Avoids Complaining</li>
+                    <li>Highly Creative: Overproduce Ideas</li>
+                    <li>Resilient: Strong Mentality</li>
+                </ul>
+                
+                <img class="skills_images goose" src="images/goose.jpg"  width="100" height="130" alt="Goose" onclick="showblowup(this.src)">
+                <img class="skills_images poseidon" src="images/poseidon.jpg"  width="100" height="130" alt="Poseidon Sketch" onclick="showblowup(this.src)">
+                <img class="skills_images gateway" src="images/gateway.jpg"  width="100" height="130" alt="Gateway" onclick="showblowup(this.src)">
+                <img class="skills_images flower_bird" src="images/flower_bird.jpg"  width="100" height="130" alt="flower_bird" onclick="showblowup(this.src)">
+
+            </div>
+            <div class="child contact" id="contact">
+                <h3 style="text-align:center">--- Contact Me! ---</h3>
+                <ul>
+                    <!-- <li>
+                        <a href="https://github.com/starlightmeteor" target="_blank">I GitHub and</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/kurtis-volker-692237364/" target="_blank">am LinkedIn</a>
+                    </li> -->
+                    <div class="social-links">Use my links:
+                        <a href="https://github.com/starlightmeteor" target="_blank" aria-label="GitHub">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/kurtis-volker-692237364/" target="_blank" aria-label="LinkedIn">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
+                        </a>
+                        <a href="https://discordapp.com/users/219683809560494080" target="_blank" aria-label="Discord">
+                            <img src="https://unpkg.com/simple-icons@v11/icons/discord.svg" alt="Discord" style="filter: invert(34%) sepia(87%) saturate(1125%) hue-rotate(208deg) brightness(92%) contrast(90%);" />
+                          </a>
+                      </div>
+
+                      <!-- https://discordapp.com/users/219683809560494080 -->
+                        <div>&#8203;
+                                <form action="https://formsubmit.co/starlightmeteor@yahoo.com" method="POST" class="contactForm">
+                                    <!-- I believe this line prevents the captcha build into Formsubmit, but _honey is a trap for bots! threw it in for fun! -->
+                                    <input type="hidden" name="_captcha" value="false">
+                                    <input type="text" name="_honey" style="display:none">
+
+                                    <label for="email">--- Or send me an email ---</label>
+                                <div>&#8203;
+                                <div>
+                                    <label for="name" class="nameLabel">Name:</label>
+                                    <input type="text" id="name" name="name" placeholder="My name is..." required>
+                                </div>
+                                </div>
+                                
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" placeholder="example@sample.com" required>
+                                <div>&#8203;
+                                    <div>
+                                        <label for="subject">Subject:</label>
+                                        <input type="text" id="subject" name="subject" placeholder="I would like to message you about..." required>
+                                    </div>
+                                </div>
+                                    <label for="message">Message:</label>
+                                    <textarea id="message" name="message" placeholder="something interesting..." style="height:200px" required></textarea>
+                                
+                                    <input type="submit" value="Submit" class="submitButton" id="submitPush">
+                                </form>
+                        </div>
+                </ul>   
+            </div>
+        </div>          
+    </section>
+
+<script src="./something.js"></script>
+</body>
+</html>
